@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block content %}
+,<form action="" method="post" class="post-form mt-4">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="btn btn-success">Save</button>
+</form>
+{% endblock content %}

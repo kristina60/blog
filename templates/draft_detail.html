@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+ <div class="row ">
+    <div class="col mt-4">
+        <div class="post">
+            <a href="{% url 'draft-publish' draft.pk %}" class="btn btn-success">publish</a>
+            <h1>
+                <a href="">{{ draft.title }}</a>
+            </h1>
+            <a href="{% url 'post-update' draft.pk %}" class="btn btn-primary">Edit</a>
+            <a href="{% url 'draft-delete' draft.pk %}" class="btn btn-danger">Delete</a>
+            <div class="date author">@{{ draft.author.username }}</div>
+            <p>{{ draft.content }}</p>
+        </div>
+    </div>
+ </div>
+ {% endblock content %}
